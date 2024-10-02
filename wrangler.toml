@@ -2,17 +2,10 @@ name = "allorigins"
 type = "webpack"
 account_id = "your_account_id"
 workers_dev = true
-route = ""
-zone_id = ""
 compatibility_date = "2023-05-18"
 
 [build]
-command = "yarn install && yarn add @cloudflare/wrangler"
+command = "yarn install"
 [build.upload]
 format = "service-worker"
-
-[env.production]
-name = "allorigins-prod"
-
-[env.staging]
-name = "allorigins-staging"
+main = "./server.js"
